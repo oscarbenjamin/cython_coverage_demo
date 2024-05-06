@@ -1,3 +1,4 @@
 #!/bin/bash
 
-git clean -fdx
+rm -rf build
+git clean -fdx src

@@ -1,0 +1,13 @@
+diff --git a/build/src/stuff/thing.cpython-311-x86_64-linux-gnu.so.p/src/stuff/thing.pyx.c b/build/src/stuff/thing.cpython-311-x86_64-linux-gnu.so.p/src/stuff/thing.pyx.c
+index 4b628fe..38af623 100644
+--- a/build/src/stuff/thing.cpython-311-x86_64-linux-gnu.so.p/src/stuff/thing.pyx.c
++++ b/build/src/stuff/thing.cpython-311-x86_64-linux-gnu.so.p/src/stuff/thing.pyx.c
+@@ -1467,7 +1467,7 @@ static const char *__pyx_filename;
+ /* #### Code section: filename_table ### */
+ 
+ static const char *__pyx_f[] = {
+-  "thing.pyx",
++  "src/stuff/thing.pyx",
+   "<stringsource>",
+ };
+ /* #### Code section: utility_code_proto_before_types ### */

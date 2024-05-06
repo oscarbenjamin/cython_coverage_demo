@@ -1,4 +1,3 @@
 #!/bin/bash
 
-rm -rf build
-git clean -fdx src
+git clean -fdx src build build-install .coverage

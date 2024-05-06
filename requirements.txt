@@ -1,0 +1,8 @@
+setuptools
+cython
+coverage
+pytest
+pytest-cov
+spin
+meson
+meson-python

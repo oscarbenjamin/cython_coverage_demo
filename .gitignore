@@ -1,0 +1,7 @@
+.python-version
+*.so
+*.dylib
+*.pyd
+*.c
+*.pyc
+build

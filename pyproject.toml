@@ -1,0 +1,36 @@
+[build-system]
+requires = ["meson-python", "cython"]
+build-backend = "mesonpy"
+
+[project]
+name = "stuff"
+description = "Demo of measuring coverage with spin/meson"
+version = "0.0.1"
+license = {text = "MIT"}
+
+[tool.pytest.ini_options]
+
+testpaths = [
+    "stuff.test",
+]
+
+[tool.spin]
+package = "stuff"
+
+[tool.spin.commands]
+
+"Build" = [
+    "spin.cmds.meson.build",
+    "spin.cmds.meson.test",
+    "spin.cmds.build.sdist",
+    "spin.cmds.pip.install",
+]
+"Documentation" = [
+    "spin.cmds.meson.docs",
+]
+"Environments" = [
+    "spin.cmds.meson.shell",
+    "spin.cmds.meson.ipython",
+    "spin.cmds.meson.python",
+    "spin.cmds.meson.run",
+]

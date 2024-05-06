@@ -1,4 +1,4 @@
 #!/bin/bash
 
-spin build --clean
-spin test --coverage
+spin build --clean -- -Dcoverage=true
+spin run pytest --cov=stuff --pyargs stuff

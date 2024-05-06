@@ -5,7 +5,9 @@ py_dep = py.dependency()
 
 cc = meson.get_compiler('c')
 
-add_project_arguments('-X', 'linetrace=True', language : 'cython')
-add_project_arguments('-DCYTHON_TRACE=1', language : 'c')
+if get_option('coverage')
+  add_project_arguments('-X', 'linetrace=True', language : 'cython')
+  add_project_arguments('-DCYTHON_TRACE=1', language : 'c')
+endif
 
 subdir('src/stuff')

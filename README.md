@@ -396,6 +396,12 @@ coverage. Also `coverage html` works.
 Using `spin test --coverage` still does not include the `.pyx` file. Need to
 look at exactly what `spin` is doing...
 
+A minor problem is that the coverage report is showing coverage results for
+`thing.pyx` from the `src` directory but all of the `.py` files from the
+`build-install` directory. With `spin test --coverage` the `.py` files show
+with paths relative to the `src` directory like `stuff/test_thing.py`. Ideally
+all paths would display like that.
+
 ## What to do
 
 There are two big problems: first the path in the c file is wrong. Possibly
@@ -405,9 +411,3 @@ maybe Cython should be changed under the given invocation.
 Secondly all the discovery code is based on assumptions that are not valid for
 a meson-based project i.e. that the generated files are in tree next to the
 source files.
-
-A third problem is that the coverage report is showing coverage results for
-`thing.pyx` from the `src` directory but all of the `.py` files from the
-`build-install` directory. With `spin test --coverage` the `.py` files show
-with paths relative to the `src` directory like `stuff/test_thing.py`. Ideally
-all paths would display like that.
